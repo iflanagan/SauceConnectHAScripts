@@ -1,0 +1,12 @@
+#!/bin/bash 
+
+# Author: Ian Flanagan SL 2020
+
+source ~/.bash_profile 
+mydir=/Users/ianflanagan/IanTest/SauceConnect/bin
+sauceTunnelId=$1
+
+echo "Starting tunnel One"
+
+cd $mydir; 
+./sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i $1 --shared-tunnel --no-remove-colliding-tunnels --se-port 7226 --pidfile /tmp/sc_client-$1_1.pid --logfile sc-$1_1.log --scproxy-port 29998

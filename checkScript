@@ -1,0 +1,18 @@
+#!/bin/bash 
+
+# check if script is running if not restart it
+
+# Define Variables 
+delay=2
+
+output=$(ps -ef  | grep "shared-tunnel" | tail -1)
+
+if [[ $output == *"no-remove-colliding-tunnels"* ]]; then
+
+  echo "Script is running do nothing"
+else
+  echo "Script is not running lets start it"
+ # source <scriptlocation>  
+ # source <scriptlocation> 
+
+fi
