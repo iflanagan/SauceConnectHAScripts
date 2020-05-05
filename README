@@ -1,0 +1,27 @@
+
+to run the scripts do the following:
+
+mkdir <dir>
+git clone https://github.com/iflanagan/SauceConnectHAScripts.git
+cd <dir>
+NOTE: sauce connect proxy versions may change check here for the latest one
+https://wiki.saucelabs.com/display/DOCS/Downloading+Sauce+Connect+Proxy
+
+wget https://saucelabs.com/downloads/sc-4.5.4-osx.zip
+tar -xvf tar -xvf sc-4.5.4-osx.zip
+mv sc-4.5.4-osx SauceConnect
+
+edit SCScriptOne and SCScriptTwo file paths
+chmod 755 SCScriptOne
+chmod 755 SCScriptTwo 
+
+./SCScriptOne <tunnelIdentifier>
+./SCScriptTwo <tunnelIdentifier>
+
+NOTE: Be sure to use the same <tunnelIdentifier> when calling both scripts
+
+now set a crontab and call 
+
+checkScript
+
+
